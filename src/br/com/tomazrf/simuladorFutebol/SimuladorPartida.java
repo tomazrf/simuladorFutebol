@@ -3,16 +3,30 @@ package br.com.tomazrf.simuladorFutebol;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
+import java.util.Scanner;
 
 public class SimuladorPartida {
 
 	public static void main(String[] args) throws FileNotFoundException {
 		// TODO Auto-generated method stub
-		int[][] time1 = new int [][]{{44},{43, 44, 40, 42},{45, 40, 40, 43},{44, 40}};
-		int[][] time2 = new int [][]{{43},{42, 41, 40, 43},{43, 42, 42, 43},{42, 41}};
-		//int[][] time2 = new int [][]{{43},{42, 41, 40, 43},{43, 42, 42},{42, 41, 43}};
-		//int[][] time2 = new int [][]{{13},{12, 11, 10, 13},{13, 12, 12, 13},{12, 11}};
+		Scanner sc = new Scanner(new File("./equipes/time1.txt"));
+		List<String[]> time1 = new ArrayList<>();	
+		while(sc.hasNextLine()){
+			String[] posicao = sc.nextLine().split(",");
+			time1.add(posicao);
+		}
+		sc.close();
+		
+		Scanner sc2 = new Scanner(new File("./equipes/time2.txt"));
+		List<String[]> time2 = new ArrayList<>();	
+		while(sc2.hasNextLine()){
+			String[] posicao = sc2.nextLine().split(",");
+			time2.add(posicao);
+		}
+		sc2.close();
 		
 		double somaDeGols = 0;
 		int vitoriasTime1 = 0;
@@ -97,15 +111,15 @@ public class SimuladorPartida {
 		pw.write("Empates: " + empates);
 		pw.flush();
 		pw.close();
-		System.out.println("setor 0: " + setor0);
+		/*System.out.println("setor 0: " + setor0);
 		System.out.println("setor 1: " + setor1);
 		System.out.println("setor 2: " + setor2);
 		System.out.println("setor 3: " + setor3);
-		System.out.println("setor 4: " + setor4);
-		System.out.println("media meio-campo: " + (setor2/(setor1 + setor2)));
+		System.out.println("setor 4: " + setor4);*/
+		System.out.println("media meio-campo: " + (setor1/(setor1 + setor3)));
 	}
 	
-	public static int atualizaSetorCampo(int setorCampo, int time1[][], int time2[][]){
+	public static int atualizaSetorCampo(int setorCampo, List<String[]> time1, List<String[]> time2){
 		
 		int resultadoDisputaSetor = disputaSetor(setorCampo, time1, time2);
 		
@@ -118,33 +132,70 @@ public class SimuladorPartida {
 		return setorCampo;
 	}
 	
-	public static int disputaSetor(int setorCampo, int time1[][], int time2[][]){
+	public static int disputaSetor(int setorCampo, List<String[]> time1, List<String[]> time2){
 		
 		int[] posicaoTimesCampo = calculaPosicaoTimes(setorCampo);
 		
-		double somaSetorTime1 = somaSetor(time1[posicaoTimesCampo[0]]);
-		double somaSetorTime2 = somaSetor(time2[posicaoTimesCampo[1]]);
+		double somaSetorTime1 = somaSetor(time1.get(posicaoTimesCampo[0]));
+		double somaSetorTime2 = somaSetor(time2.get(posicaoTimesCampo[1]));
+		
+		double diferencaSetores = calculaMediaSetores(time1.get(posicaoTimesCampo[0]),time2.get(posicaoTimesCampo[1]));
+		double fatorEquilibrio1 = 1;
+		double fatorEquilibrio2 = 1;
+		
+		if(diferencaSetores <= -30){
+			fatorEquilibrio1 = 2.1;
+		}
+		else if(diferencaSetores <= -25){
+			fatorEquilibrio1 = 1.85;
+		}
+		else if(diferencaSetores <= -20){
+			fatorEquilibrio1 = 1.65;
+		}
+		else if(diferencaSetores < -10){
+			fatorEquilibrio1 = 1.45;
+		}
+		else if(diferencaSetores >= 30){
+			fatorEquilibrio2 = 2.1;
+		}
+		else if(diferencaSetores >= 25){
+			fatorEquilibrio2 = 1.85;
+		}
+		else if(diferencaSetores >= 20){
+			fatorEquilibrio2 = 1.65;
+		}
+		else if(diferencaSetores > 10){
+			fatorEquilibrio2 = 1.45;
+		}
 		
 		switch(setorCampo){
 		case 0 :
-			somaSetorTime1 *= 2;
+			somaSetorTime1 *= (2.1 + fatorEquilibrio1);
+			somaSetorTime2 *= (fatorEquilibrio2);
 			break;
 		case 1 :
-			somaSetorTime1 *= 1.4725;
+			somaSetorTime1 *= (2.1 + fatorEquilibrio1);
+			somaSetorTime2 *= (fatorEquilibrio2);
+			break;
+		case 2 :
+			somaSetorTime1 *= (0.1 + fatorEquilibrio1);
+			somaSetorTime2 *= (fatorEquilibrio2);
 			break;
 		case 3 :
-			somaSetorTime2 *= 1.4725;
+			somaSetorTime2 *= (1.9 + fatorEquilibrio2);
+			somaSetorTime1 *= (fatorEquilibrio1);
 			break;
 		case 4 :
-			somaSetorTime2 *= 2;
+			somaSetorTime2 *= (1.9 + fatorEquilibrio2);
+			somaSetorTime1 *= (fatorEquilibrio1);
 			break;
 		default :
 			break;
 		}
 		
 		Random rand = new Random();
-		double fatorTime1 = (double)(rand.nextInt(10) + 1)/10;
-		double fatorTime2 = (double)(rand.nextInt(10) + 1)/10;
+		double fatorTime1 = (double)(rand.nextInt(100) + 1)/100;
+		double fatorTime2 = (double)(rand.nextInt(100) + 1)/100;
 
 		/*Random rand1 = new Random();
 		Random rand2 = new Random();
@@ -166,11 +217,19 @@ public class SimuladorPartida {
 		return 0;
 	}
 	
-	public static int somaSetor(int[] setorTime){
+	private static double calculaMediaSetores(String[] time1, String[] time2) {
+		
+		double mediaTime1 = somaSetor(time1)/time1.length;
+		double mediaTime2 = somaSetor(time2)/time2.length;
+		
+		return mediaTime1 - mediaTime2;
+	}
+
+	public static int somaSetor(String[] strings){
 		int soma = 0;
 		
-		for(int jogador : setorTime){
-			soma += jogador;
+		for(String jogador : strings){
+			soma += Integer.parseInt(jogador);
 		}
 		
 		return soma;
