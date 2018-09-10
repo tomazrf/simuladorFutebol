@@ -1,0 +1,12 @@
+Bélgica
+GK,Courtois,43
+DE,Alderweid,42
+DE,Kompany,43
+DE,Vertonghen,43
+DE,Chadli,40
+ME,Dembele,42
+ME,Witsel,41
+ME,Fellaini,40
+AT,De Bruyne,43
+AT,Lukaku,42
+AT,Hazard,43

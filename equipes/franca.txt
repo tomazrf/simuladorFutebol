@@ -1,0 +1,12 @@
+França
+GK,Lloris,44
+DE,Pavard,43
+DE,Varane,44
+DE,Umtiti,40
+DE,Hernandez,42
+ME,Pogba,45
+ME,Kante,40
+ME,Matuidi,40
+AT,Mbappe,43
+AT,Griezmann,44
+AT,Giroud,40
