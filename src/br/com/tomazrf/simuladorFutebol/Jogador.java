@@ -33,5 +33,10 @@ public class Jogador {
 	public void setTime(Time time) {
 		this.time = time;
 	}
+
+	@Override
+	public String toString() {
+		return nome;
+	}
 	
 }

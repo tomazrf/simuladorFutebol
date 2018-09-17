@@ -1,5 +1,6 @@
 package br.com.tomazrf.simuladorFutebol;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
@@ -9,6 +10,7 @@ public class Partida {
 	private int placarTimeFora;
 	private Time timeCasa;
 	private Time timeFora;
+	private EstatisticaPartida estatistica;
 	
 	public int getPlacarTimeCasa() {
 		return placarTimeCasa;
@@ -21,30 +23,58 @@ public class Partida {
 	}
 	public Time getTimeFora() {
 		return timeFora;
-	}
-	
+	}	
+
 	public Partida(Time timeCasa, Time timeFora){
 		this.timeCasa = timeCasa;
 		this.timeFora = timeFora;
+		this.estatistica = new EstatisticaPartida();
 	}
 	
 	public void executaPartida(){
 		int setorCampo = 2;
 		
 		for(int i = 0; i<90 ; i++){
-
 			setorCampo = atualizaSetorCampo(setorCampo, this.timeCasa.getJogadores(), this.timeFora.getJogadores());
 			if(setorCampo>4){
 				setorCampo = 2;
 				++this.placarTimeCasa;
+				this.estatistica.getGolsTimeCasa().add(verificaAutorGol(this.timeCasa.getJogadores()));
 			}
 			else if(setorCampo<0){
 				setorCampo = 2;
 				++this.placarTimeFora;
+				this.estatistica.getGolsTimeFora().add(verificaAutorGol(this.timeFora.getJogadores()));
 			}
 		}
 		System.out.println("Resultado final: " + this.placarTimeCasa + " x " + this.placarTimeFora);
+		System.out.println("Gols time casa: " + this.estatistica.getGolsTimeCasa());
+		System.out.println("Gols time fora: " + this.estatistica.getGolsTimeFora());
+	}
+	
+	private Jogador verificaAutorGol(List<Jogador> jogadores) {
+		
+		Random rand = new Random();
+		int fatorGol = rand.nextInt(100);
+		List<Jogador> listaPosicao = new ArrayList<>();
+		int posicaoCampo = 0;
+		
+		if(fatorGol<10){
+			posicaoCampo = 1;
+		}
+		else if(fatorGol<40){
+			posicaoCampo = 2;
+		}
+		else{
+			posicaoCampo = 3;
+		}
+		
+		for(Jogador jogador : jogadores){
+			if(verificaPosicaoJogador(jogador, posicaoCampo))
+				listaPosicao.add(jogador);	
+		}
 
+		return listaPosicao.get(rand.nextInt(listaPosicao.size()));
 	}
 	
 	private int atualizaSetorCampo(int setorCampo, List<Jogador> timeCasa, List<Jogador> timeFora){
@@ -200,15 +230,19 @@ public class Partida {
 		case 0:
 			if(jogador.getPosicao().equals(Jogador.codigoGoleiro))
 				return true;
+			break;
 		case 1:
 			if(jogador.getPosicao().equals(Jogador.codigoDefensor))
 				return true;
+			break;
 		case 2:
 			if(jogador.getPosicao().equals(Jogador.codigoMeioCampo))
 				return true;
+			break;
 		case 3:
 			if(jogador.getPosicao().equals(Jogador.codigoAtacante))
 				return true;
+			break;
 		}
 		
 		return false;
