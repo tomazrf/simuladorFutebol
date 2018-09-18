@@ -1,11 +1,16 @@
 package br.com.tomazrf.simuladorFutebol;
 
+import java.util.Comparator;
+import java.util.List;
+
 public class Jogador {
 	
 	private String nome;
 	private int nivel;
 	private String posicao;
 	private Time time;
+	private List<Integer> golsPorTemporada;
+	private int golsNaTemporadaAtual;
 	
 	public static final String codigoGoleiro = "GK";
 	public static final String codigoDefensor= "DE";
@@ -33,10 +38,37 @@ public class Jogador {
 	public void setTime(Time time) {
 		this.time = time;
 	}
+	public List<Integer> getGolsPorTemporada() {
+		return golsPorTemporada;
+	}
+	public void setGolsPorTemporada(List<Integer> golsPorTemporada) {
+		this.golsPorTemporada = golsPorTemporada;
+	}
+	public int getGolsNaTemporadaAtual() {
+		return golsNaTemporadaAtual;
+	}
+	public void somaGol(){
+		++this.golsNaTemporadaAtual;
+	}
 
 	@Override
 	public String toString() {
 		return nome;
 	}
+	
+	public String desempenhoTemporada(){
+		return "Nome: " + nome + ", Gols: " + golsNaTemporadaAtual;
+	}
+	
+	public static Comparator<Jogador> getGolsComparator() {
+        return new Comparator<Jogador>() {
+        	public int compare(Jogador a, Jogador b) 
+            { 
+                return b.golsNaTemporadaAtual - a.golsNaTemporadaAtual; 
+            } 
+        };
+    }
+	
+	
 	
 }

@@ -32,7 +32,14 @@ public class SimuladorPartida {
 		sc2.close();
 		
 		Time timeCasa = new Time(listaTimeCasa, nomeTimeCasa);
+		
+		for(Jogador jogador : timeCasa.getJogadores())
+			jogador.setTime(timeCasa);
+		
 		Time timeFora = new Time(listaTimeFora, nomeTimeFora);
+		
+		for(Jogador jogador : timeFora.getJogadores())
+			jogador.setTime(timeFora);
 		
 		double somaDeGols = 0;
 		int vitoriasTime1 = 0;
@@ -42,11 +49,19 @@ public class SimuladorPartida {
 		int numeroDeJogos = 90;
 		
 		PrintWriter pw = new PrintWriter(new File("resultado.txt"));
+		PrintWriter pwa = new PrintWriter(new File("artilharia.txt"));
+		
+		List<Time> listaTimes = new ArrayList<>();
+		listaTimes.add(timeCasa);
+		listaTimes.add(timeFora);
+		
+		Campeonato campeonato = new Campeonato(listaTimes);
 		
 		for(int j=0; j<numeroDeJogos; j++){
 			
 			Partida partida = new Partida(timeCasa, timeFora);
 			partida.executaPartida();
+			campeonato.getListaPartidas().add(partida);
 			
 			somaDeGols += (partida.getPlacarTimeCasa() + partida.getPlacarTimeFora());
 			if(partida.getPlacarTimeCasa()>partida.getPlacarTimeFora()){
@@ -63,6 +78,12 @@ public class SimuladorPartida {
 			pw.println("");
 			pw.flush();
 		}
+		List<Jogador> listaArtilheiros = campeonato.calculaArtilharia();
+		for(Jogador jogador : listaArtilheiros){
+			pwa.write(jogador.desempenhoTemporada());
+			pwa.println("");
+			pwa.flush();
+		}	
 		pw.println("");
 		System.out.println("Média de gols: " + somaDeGols/numeroDeJogos);
 		pw.write("Média de gols: " + somaDeGols/numeroDeJogos);
@@ -76,6 +97,7 @@ public class SimuladorPartida {
 		System.out.println("Empates: " + empates);
 		pw.write("Empates: " + empates);
 		pw.flush();
+		pwa.close();
 		pw.close();
 	}
 }

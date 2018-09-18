@@ -39,12 +39,16 @@ public class Partida {
 			if(setorCampo>4){
 				setorCampo = 2;
 				++this.placarTimeCasa;
-				this.estatistica.getGolsTimeCasa().add(verificaAutorGol(this.timeCasa.getJogadores()));
+				Jogador autorDoGolCasa = verificaAutorGol(this.timeCasa.getJogadores());
+				autorDoGolCasa.somaGol();
+				this.estatistica.getGolsTimeCasa().add(autorDoGolCasa);
 			}
 			else if(setorCampo<0){
 				setorCampo = 2;
 				++this.placarTimeFora;
-				this.estatistica.getGolsTimeFora().add(verificaAutorGol(this.timeFora.getJogadores()));
+				Jogador autorDoGolFora = verificaAutorGol(this.timeFora.getJogadores());
+				autorDoGolFora.somaGol();
+				this.estatistica.getGolsTimeFora().add(autorDoGolFora);
 			}
 		}
 		System.out.println("Resultado final: " + this.placarTimeCasa + " x " + this.placarTimeFora);
