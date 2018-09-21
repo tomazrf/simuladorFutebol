@@ -6,6 +6,7 @@ public class Time {
 
 	private String nome;
 	private List<Jogador> jogadores;
+	private int pontosNaTemporadaAtual;
 	
 	public Time(List<Jogador> jogadores, String nome){
 		this.jogadores = jogadores;
@@ -17,6 +18,16 @@ public class Time {
 	}
 	public List<Jogador> getJogadores() {
 		return jogadores;
+	}
+	public int getPontosNaTemporadaAtual() {
+		return pontosNaTemporadaAtual;
+	}
+
+	public void vitoriaPartida() {
+		this.pontosNaTemporadaAtual += 3;
+	}
+	public void empatePartida() {
+		this.pontosNaTemporadaAtual += 1;
 	}
 	
 }

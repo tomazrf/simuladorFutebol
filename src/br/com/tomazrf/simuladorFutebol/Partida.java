@@ -51,9 +51,17 @@ public class Partida {
 				this.estatistica.getGolsTimeFora().add(autorDoGolFora);
 			}
 		}
-		System.out.println("Resultado final: " + this.placarTimeCasa + " x " + this.placarTimeFora);
-		System.out.println("Gols time casa: " + this.estatistica.getGolsTimeCasa());
-		System.out.println("Gols time fora: " + this.estatistica.getGolsTimeFora());
+		
+		if(this.getPlacarTimeCasa()>this.getPlacarTimeFora()){
+			this.getTimeCasa().vitoriaPartida();
+		}
+		else if(this.getPlacarTimeCasa()<this.getPlacarTimeFora()){
+			this.getTimeFora().vitoriaPartida();
+		}
+		else{
+			this.getTimeCasa().empatePartida();
+			this.getTimeFora().empatePartida();
+		}
 	}
 	
 	private Jogador verificaAutorGol(List<Jogador> jogadores) {

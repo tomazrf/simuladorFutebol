@@ -1,4 +1,4 @@
-FranÃ§a
+França
 GK,Lloris,44
 DE,Pavard,43
 DE,Varane,44

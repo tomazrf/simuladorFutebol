@@ -1,0 +1,12 @@
+Uruguai
+GK,Muslera,33
+DE,Cáceres,32
+DE,Godín,31
+DE,Giménez,30
+DE,Varela,33
+ME,De Arrascaeta,33
+ME,Betancur,32
+ME,Vecino,32
+ME,Nández,33
+AT,Cavani,35
+AT,Suárez,36

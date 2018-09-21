@@ -1,18 +1,20 @@
 package br.com.tomazrf.simuladorFutebol;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class EstatisticaCampeonato {
 	
-	private List<Partida> listaPartidas;
+	private int somaGols;
+	private double mediaGols;
 	
-	public EstatisticaCampeonato(){
-		this.listaPartidas = new ArrayList<>();
+	public EstatisticaCampeonato(int somaGols, double mediaGols){
+		this.mediaGols = mediaGols;
+		this.somaGols = somaGols;
 	}
 
-	public List<Partida> getListaPartidas() {
-		return listaPartidas;
+	public int getSomaGols() {
+		return somaGols;
+	}
+	public double getMediaGols() {
+		return mediaGols;
 	}
 	
 }

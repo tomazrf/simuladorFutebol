@@ -1,0 +1,12 @@
+Japão
+GK,Kawashima,23
+DE,Nagatomo,22
+DE,Shoji,21
+DE,Yoshida,20
+DE,Sakai,23
+ME,Hasebe,23
+ME,Shibasaki,22
+ME,Haraguchi,22
+ME,Kagawa,23
+AT,Osako,22
+AT,Inui,21
