@@ -1,0 +1,12 @@
+Bayern Munchen
+GK,Neuer,46
+DE,Alaba,44
+DE,Hummels,45
+DE,Boateng,44
+DE,Kimmich,42
+ME,James Rodríguez,45
+ME,Martínez,44
+ME,Sanches,43
+AT,Ribéry,45
+AT,Lewandowski,46
+AT,Robben,45

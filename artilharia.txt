@@ -1,44 +1,88 @@
-Nome: Giroud, Gols: 3
-Nome: Hazard, Gols: 3
+Nome: Cavani, Gols: 10
+Nome: Bale, Gols: 7
+Nome: Messi, Gols: 6
+Nome: Dembelé, Gols: 6
+Nome: Sterling, Gols: 6
+Nome: Rabiot, Gols: 5
+Nome: Neymar, Gols: 5
+Nome: Sanches, Gols: 5
+Nome: Griezmann, Gols: 5
+Nome: Di Maria, Gols: 4
+Nome: Mbappé, Gols: 4
+Nome: Bernardo Silva, Gols: 4
+Nome: Mané, Gols: 4
+Nome: Mandzukic, Gols: 4
+Nome: James Rodríguez, Gols: 4
 Nome: Suárez, Gols: 3
-Nome: Mbappe, Gols: 2
-Nome: Griezmann, Gols: 2
-Nome: Fellaini, Gols: 2
-Nome: De Bruyne, Gols: 2
-Nome: Nández, Gols: 2
-Nome: Umtiti, Gols: 1
-Nome: Hernandez, Gols: 1
-Nome: Pogba, Gols: 1
-Nome: Kante, Gols: 1
-Nome: Witsel, Gols: 1
-Nome: Lukaku, Gols: 1
-Nome: Shoji, Gols: 1
-Nome: Lloris, Gols: 0
-Nome: Pavard, Gols: 0
+Nome: Marquinhos, Gols: 3
+Nome: Gabriel Jesus, Gols: 3
+Nome: Salah, Gols: 3
+Nome: Sturridge, Gols: 3
+Nome: Bernardeschi, Gols: 3
+Nome: Ribéry, Gols: 3
+Nome: Robben, Gols: 3
+Nome: Rodri Hernández, Gols: 3
+Nome: P. Coutinho, Gols: 2
+Nome: Modric, Gols: 2
+Nome: Casemiro, Gols: 2
+Nome: Kroos, Gols: 2
+Nome: Benzema, Gols: 2
+Nome: Meunier, Gols: 2
+Nome: Matuidi, Gols: 2
+Nome: Lewandowski, Gols: 2
+Nome: Piqué, Gols: 1
+Nome: Jordi Alba, Gols: 1
+Nome: Rakitic, Gols: 1
+Nome: Busquets, Gols: 1
+Nome: Carvajal, Gols: 1
+Nome: Sergio Ramos, Gols: 1
+Nome: Walker, Gols: 1
+Nome: Fernandinho, Gols: 1
+Nome: David Silva, Gols: 1
+Nome: Alexander-Arnold, Gols: 1
+Nome: Gomez, Gols: 1
+Nome: Van Dijk, Gols: 1
+Nome: Wijnaldum, Gols: 1
+Nome: Henderson, Gols: 1
+Nome: Chielini, Gols: 1
+Nome: Cancelo, Gols: 1
+Nome: Pjanic, Gols: 1
+Nome: Alaba, Gols: 1
+Nome: Boateng, Gols: 1
+Nome: Godín, Gols: 1
+Nome: Giménez, Gols: 1
+Nome: Koke, Gols: 1
+Nome: Diego Costa, Gols: 1
+Nome: Ter Stegen, Gols: 0
+Nome: Sergi Roberto, Gols: 0
+Nome: Umtiti, Gols: 0
+Nome: Navas, Gols: 0
 Nome: Varane, Gols: 0
-Nome: Matuidi, Gols: 0
-Nome: Courtois, Gols: 0
-Nome: Alderweid, Gols: 0
-Nome: Kompany, Gols: 0
-Nome: Vertonghen, Gols: 0
-Nome: Chadli, Gols: 0
-Nome: Dembele, Gols: 0
-Nome: Muslera, Gols: 0
-Nome: Cáceres, Gols: 0
-Nome: Godín, Gols: 0
-Nome: Giménez, Gols: 0
-Nome: Varela, Gols: 0
-Nome: De Arrascaeta, Gols: 0
-Nome: Betancur, Gols: 0
-Nome: Vecino, Gols: 0
-Nome: Cavani, Gols: 0
-Nome: Kawashima, Gols: 0
-Nome: Nagatomo, Gols: 0
-Nome: Yoshida, Gols: 0
-Nome: Sakai, Gols: 0
-Nome: Hasebe, Gols: 0
-Nome: Shibasaki, Gols: 0
-Nome: Haraguchi, Gols: 0
-Nome: Kagawa, Gols: 0
-Nome: Osako, Gols: 0
-Nome: Inui, Gols: 0
+Nome: Marcelo, Gols: 0
+Nome: Isco, Gols: 0
+Nome: Aréola, Gols: 0
+Nome: Bernat, Gols: 0
+Nome: Kimpembe, Gols: 0
+Nome: Thiago Silva, Gols: 0
+Nome: Ederson, Gols: 0
+Nome: Stones, Gols: 0
+Nome: Laporte, Gols: 0
+Nome: Delph, Gols: 0
+Nome: Gundogan, Gols: 0
+Nome: Alisson, Gols: 0
+Nome: Robertson, Gols: 0
+Nome: Milner, Gols: 0
+Nome: Sczcesny, Gols: 0
+Nome: Alex Sandro, Gols: 0
+Nome: Bonucci, Gols: 0
+Nome: Khedira, Gols: 0
+Nome: Cristiano Ronaldo, Gols: 0
+Nome: Neuer, Gols: 0
+Nome: Hummels, Gols: 0
+Nome: Kimmich, Gols: 0
+Nome: Martínez, Gols: 0
+Nome: Oblak, Gols: 0
+Nome: Hernández, Gols: 0
+Nome: Juanfran, Gols: 0
+Nome: Saúl, Gols: 0
+Nome: Correa, Gols: 0

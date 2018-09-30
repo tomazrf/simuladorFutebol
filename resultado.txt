@@ -1,17 +1,65 @@
-França: 3 x Japão: 0
-Bélgica: 0 x Uruguai: 1
-Uruguai: 0 x França: 2
-Japão: 1 x Bélgica: 3
-Bélgica: 1 x França: 0
-Japão: 0 x Uruguai: 1
-França: 1 x Bélgica: 0
-Uruguai: 2 x Japão: 0
-França: 1 x Uruguai: 1
-Bélgica: 3 x Japão: 0
-Japão: 0 x França: 4
-Uruguai: 0 x Bélgica: 2
+Real Madrid: 0 x Atletico Madrid: 1
+Juventus: 0 x Paris Saint Germain: 0
+Liverpool: 5 x Manchester City: 0
+Barcelona: 1 x Bayern Munchen: 1
+Paris Saint Germain: 1 x Real Madrid: 3
+Manchester City: 1 x Barcelona: 2
+Atletico Madrid: 3 x Juventus: 1
+Bayern Munchen: 0 x Liverpool: 0
+Liverpool: 1 x Real Madrid: 1
+Barcelona: 3 x Paris Saint Germain: 1
+Juventus: 0 x Manchester City: 0
+Bayern Munchen: 2 x Atletico Madrid: 0
+Real Madrid: 2 x Manchester City: 2
+Juventus: 0 x Barcelona: 1
+Paris Saint Germain: 4 x Bayern Munchen: 1
+Atletico Madrid: 0 x Liverpool: 0
+Bayern Munchen: 3 x Real Madrid: 0
+Barcelona: 1 x Atletico Madrid: 1
+Liverpool: 1 x Juventus: 1
+Manchester City: 2 x Paris Saint Germain: 4
+Barcelona: 1 x Liverpool: 0
+Juventus: 1 x Real Madrid: 1
+Manchester City: 1 x Bayern Munchen: 0
+Paris Saint Germain: 1 x Atletico Madrid: 2
+Real Madrid: 3 x Barcelona: 0
+Bayern Munchen: 0 x Juventus: 1
+Atletico Madrid: 0 x Manchester City: 1
+Liverpool: 1 x Paris Saint Germain: 2
+Atletico Madrid: 1 x Real Madrid: 0
+Paris Saint Germain: 3 x Juventus: 2
+Manchester City: 1 x Liverpool: 3
+Bayern Munchen: 1 x Barcelona: 0
+Real Madrid: 3 x Paris Saint Germain: 2
+Barcelona: 2 x Manchester City: 2
+Juventus: 2 x Atletico Madrid: 0
+Liverpool: 1 x Bayern Munchen: 3
+Real Madrid: 1 x Liverpool: 1
+Paris Saint Germain: 2 x Barcelona: 2
+Manchester City: 1 x Juventus: 0
+Atletico Madrid: 1 x Bayern Munchen: 2
+Manchester City: 1 x Real Madrid: 1
+Barcelona: 2 x Juventus: 1
+Bayern Munchen: 1 x Paris Saint Germain: 4
+Liverpool: 0 x Atletico Madrid: 1
+Real Madrid: 1 x Bayern Munchen: 0
+Atletico Madrid: 1 x Barcelona: 1
+Juventus: 2 x Liverpool: 1
+Paris Saint Germain: 3 x Manchester City: 1
+Liverpool: 0 x Barcelona: 4
+Real Madrid: 1 x Juventus: 0
+Bayern Munchen: 2 x Manchester City: 1
+Atletico Madrid: 1 x Paris Saint Germain: 1
+Barcelona: 1 x Real Madrid: 0
+Juventus: 1 x Bayern Munchen: 3
+Manchester City: 2 x Atletico Madrid: 0
+Paris Saint Germain: 5 x Liverpool: 1
 
-Time: França, Pontos: 13
-Time: Bélgica, Pontos: 12
-Time: Uruguai, Pontos: 10
-Time: Japão, Pontos: 0
+Time: Barcelona, Pontos: 26
+Time: Paris Saint Germain, Pontos: 24
+Time: Bayern Munchen, Pontos: 23
+Time: Real Madrid, Pontos: 20
+Time: Atletico Madrid, Pontos: 19
+Time: Manchester City, Pontos: 16
+Time: Juventus, Pontos: 13
+Time: Liverpool, Pontos: 11

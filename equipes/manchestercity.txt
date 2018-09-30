@@ -1,0 +1,12 @@
+Manchester City
+GK,Ederson,44
+DE,Walker,43
+DE,Stones,43
+DE,Laporte,42
+DE,Delph,43
+ME,Gundogan,43
+ME,Fernandinho,42
+ME,David Silva,43
+AT,Bernardo Silva,43
+AT,Gabriel Jesus,42
+AT,Sterling,41

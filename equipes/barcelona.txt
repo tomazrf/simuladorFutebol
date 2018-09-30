@@ -1,0 +1,12 @@
+Barcelona
+GK,Ter Stegen,45
+DE,Sergi Roberto,44
+DE,Piqué,47
+DE,Umtiti,43
+DE,Jordi Alba,44
+ME,Rakitic,46
+ME,Busquets,45
+ME,P. Coutinho,46
+AT,Messi,50
+AT,Suárez,48
+AT,Dembelé,44

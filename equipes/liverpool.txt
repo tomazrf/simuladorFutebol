@@ -1,0 +1,12 @@
+Liverpool
+GK,Alisson,43
+DE,Alexander-Arnold,42
+DE,Gomez,42
+DE,Van Dijk,43
+DE,Robertson,41
+ME,Wijnaldum,41
+ME,Henderson,42
+ME,Milner,43
+AT,Salah,46
+AT,Sturridge,41
+AT,Mané,44

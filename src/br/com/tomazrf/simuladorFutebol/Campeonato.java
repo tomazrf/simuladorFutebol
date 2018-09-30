@@ -48,19 +48,90 @@ public class Campeonato {
 		return jogadoresCampeonato;
 	}
 	
+	private List<Time> calculaPontuacao() {
+		
+		List<Time> timesCampeonato = new ArrayList<>();
+		
+		for(Time time : this.listaTimes){
+			timesCampeonato.add(time);
+		}
+		
+		Collections.sort(timesCampeonato, Time.getPontosComparator());
+		
+		return timesCampeonato;
+	}
+	
 	private void geraTabela(){
-		this.listaPartidas.add(new Partida(this.getListaTimes().get(0), this.getListaTimes().get(3)));
-		this.listaPartidas.add(new Partida(this.getListaTimes().get(1), this.getListaTimes().get(2)));
-		this.listaPartidas.add(new Partida(this.getListaTimes().get(2), this.getListaTimes().get(0)));
-		this.listaPartidas.add(new Partida(this.getListaTimes().get(3), this.getListaTimes().get(1)));
-		this.listaPartidas.add(new Partida(this.getListaTimes().get(1), this.getListaTimes().get(0)));
-		this.listaPartidas.add(new Partida(this.getListaTimes().get(3), this.getListaTimes().get(2)));
-		this.listaPartidas.add(new Partida(this.getListaTimes().get(0), this.getListaTimes().get(1)));
-		this.listaPartidas.add(new Partida(this.getListaTimes().get(2), this.getListaTimes().get(3)));
-		this.listaPartidas.add(new Partida(this.getListaTimes().get(0), this.getListaTimes().get(2)));
-		this.listaPartidas.add(new Partida(this.getListaTimes().get(1), this.getListaTimes().get(3)));
-		this.listaPartidas.add(new Partida(this.getListaTimes().get(3), this.getListaTimes().get(0)));
+		this.listaPartidas.add(new Partida(this.getListaTimes().get(1), this.getListaTimes().get(7)));
+		this.listaPartidas.add(new Partida(this.getListaTimes().get(5), this.getListaTimes().get(2)));
+		this.listaPartidas.add(new Partida(this.getListaTimes().get(4), this.getListaTimes().get(3)));
+		this.listaPartidas.add(new Partida(this.getListaTimes().get(0), this.getListaTimes().get(6)));
+
 		this.listaPartidas.add(new Partida(this.getListaTimes().get(2), this.getListaTimes().get(1)));
+		this.listaPartidas.add(new Partida(this.getListaTimes().get(3), this.getListaTimes().get(0)));
+		this.listaPartidas.add(new Partida(this.getListaTimes().get(7), this.getListaTimes().get(5)));
+		this.listaPartidas.add(new Partida(this.getListaTimes().get(6), this.getListaTimes().get(4)));
+
+		this.listaPartidas.add(new Partida(this.getListaTimes().get(4), this.getListaTimes().get(1)));
+		this.listaPartidas.add(new Partida(this.getListaTimes().get(0), this.getListaTimes().get(2)));
+		this.listaPartidas.add(new Partida(this.getListaTimes().get(5), this.getListaTimes().get(3)));
+		this.listaPartidas.add(new Partida(this.getListaTimes().get(6), this.getListaTimes().get(7)));
+
+		this.listaPartidas.add(new Partida(this.getListaTimes().get(1), this.getListaTimes().get(3)));
+		this.listaPartidas.add(new Partida(this.getListaTimes().get(5), this.getListaTimes().get(0)));
+		this.listaPartidas.add(new Partida(this.getListaTimes().get(2), this.getListaTimes().get(6)));
+		this.listaPartidas.add(new Partida(this.getListaTimes().get(7), this.getListaTimes().get(4)));
+
+		this.listaPartidas.add(new Partida(this.getListaTimes().get(6), this.getListaTimes().get(1)));
+		this.listaPartidas.add(new Partida(this.getListaTimes().get(0), this.getListaTimes().get(7)));
+		this.listaPartidas.add(new Partida(this.getListaTimes().get(4), this.getListaTimes().get(5)));
+		this.listaPartidas.add(new Partida(this.getListaTimes().get(3), this.getListaTimes().get(2)));
+
+		this.listaPartidas.add(new Partida(this.getListaTimes().get(0), this.getListaTimes().get(4)));
+		this.listaPartidas.add(new Partida(this.getListaTimes().get(5), this.getListaTimes().get(1)));
+		this.listaPartidas.add(new Partida(this.getListaTimes().get(3), this.getListaTimes().get(6)));
+		this.listaPartidas.add(new Partida(this.getListaTimes().get(2), this.getListaTimes().get(7)));
+
+		this.listaPartidas.add(new Partida(this.getListaTimes().get(1), this.getListaTimes().get(0)));
+		this.listaPartidas.add(new Partida(this.getListaTimes().get(6), this.getListaTimes().get(5)));
+		this.listaPartidas.add(new Partida(this.getListaTimes().get(7), this.getListaTimes().get(3)));
+		this.listaPartidas.add(new Partida(this.getListaTimes().get(4), this.getListaTimes().get(2)));
+
+		this.listaPartidas.add(new Partida(this.getListaTimes().get(7), this.getListaTimes().get(1)));
+		this.listaPartidas.add(new Partida(this.getListaTimes().get(2), this.getListaTimes().get(5)));
+		this.listaPartidas.add(new Partida(this.getListaTimes().get(3), this.getListaTimes().get(4)));
+		this.listaPartidas.add(new Partida(this.getListaTimes().get(6), this.getListaTimes().get(0)));
+
+		this.listaPartidas.add(new Partida(this.getListaTimes().get(1), this.getListaTimes().get(2)));
+		this.listaPartidas.add(new Partida(this.getListaTimes().get(0), this.getListaTimes().get(3)));
+		this.listaPartidas.add(new Partida(this.getListaTimes().get(5), this.getListaTimes().get(7)));
+		this.listaPartidas.add(new Partida(this.getListaTimes().get(4), this.getListaTimes().get(6)));
+
+		this.listaPartidas.add(new Partida(this.getListaTimes().get(1), this.getListaTimes().get(4)));
+		this.listaPartidas.add(new Partida(this.getListaTimes().get(2), this.getListaTimes().get(0)));
+		this.listaPartidas.add(new Partida(this.getListaTimes().get(3), this.getListaTimes().get(5)));
+		this.listaPartidas.add(new Partida(this.getListaTimes().get(7), this.getListaTimes().get(6)));
+
+		this.listaPartidas.add(new Partida(this.getListaTimes().get(3), this.getListaTimes().get(1)));
+		this.listaPartidas.add(new Partida(this.getListaTimes().get(0), this.getListaTimes().get(5)));
+		this.listaPartidas.add(new Partida(this.getListaTimes().get(6), this.getListaTimes().get(2)));
+		this.listaPartidas.add(new Partida(this.getListaTimes().get(4), this.getListaTimes().get(7)));
+
+		this.listaPartidas.add(new Partida(this.getListaTimes().get(1), this.getListaTimes().get(6)));
+		this.listaPartidas.add(new Partida(this.getListaTimes().get(7), this.getListaTimes().get(0)));
+		this.listaPartidas.add(new Partida(this.getListaTimes().get(5), this.getListaTimes().get(4)));
+		this.listaPartidas.add(new Partida(this.getListaTimes().get(2), this.getListaTimes().get(3)));
+
+		this.listaPartidas.add(new Partida(this.getListaTimes().get(4), this.getListaTimes().get(0)));
+		this.listaPartidas.add(new Partida(this.getListaTimes().get(1), this.getListaTimes().get(5)));
+		this.listaPartidas.add(new Partida(this.getListaTimes().get(6), this.getListaTimes().get(3)));
+		this.listaPartidas.add(new Partida(this.getListaTimes().get(7), this.getListaTimes().get(2)));
+
+		this.listaPartidas.add(new Partida(this.getListaTimes().get(0), this.getListaTimes().get(1)));
+		this.listaPartidas.add(new Partida(this.getListaTimes().get(5), this.getListaTimes().get(6)));
+		this.listaPartidas.add(new Partida(this.getListaTimes().get(3), this.getListaTimes().get(7)));
+		this.listaPartidas.add(new Partida(this.getListaTimes().get(2), this.getListaTimes().get(4)));
+
 	}
 
 	public void geraEstatisticas() {
@@ -99,7 +170,8 @@ public class Campeonato {
 			pwa.flush();
 		}
 		pw.println("");
-		for(Time time : this.getListaTimes()){
+		List<Time> listaTimesPontuacao = this.calculaPontuacao();
+		for(Time time : listaTimesPontuacao){
 			pw.write("Time: " + time.getNome() + ", Pontos: " + time.getPontosNaTemporadaAtual());
 			pw.println("");
 			pw.flush();
@@ -108,7 +180,6 @@ public class Campeonato {
 
 		pwa.close();
 		pw.close();
-		
 	}
 	
 }

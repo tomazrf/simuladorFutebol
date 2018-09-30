@@ -1,0 +1,12 @@
+Atletico Madrid
+GK,Oblak,43
+DE,Hernández,41
+DE,Godín,44
+DE,Giménez,40
+DE,Juanfran,41
+ME,Koke,43
+ME,Rodri Hernández,41
+ME,Saúl,43
+ME,Correa,40
+AT,Griezmann,45
+AT,Diego Costa,44

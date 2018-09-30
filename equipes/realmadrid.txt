@@ -1,0 +1,12 @@
+Real Madrid
+GK,Navas,46
+DE,Carvajal,43
+DE,Varane,44
+DE,Sergio Ramos,47
+DE,Marcelo,46
+ME,Modric,49
+ME,Casemiro,46
+ME,Kroos,46
+AT,Bale,45
+AT,Benzema,44
+AT,Isco,42

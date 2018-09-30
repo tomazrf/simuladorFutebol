@@ -1,0 +1,12 @@
+Paris Saint Germain
+GK,Aréola,44
+DE,Bernat,42
+DE,Kimpembe,42
+DE,Thiago Silva,44
+DE,Meunier,42
+ME,Di Maria,43
+ME,Marquinhos,42
+ME,Rabiot,44
+AT,Neymar,48
+AT,Cavani,45
+AT,Mbappé,47

@@ -1,0 +1,12 @@
+Juventus
+GK,Sczcesny,42
+DE,Alex Sandro,43
+DE,Chielini,44
+DE,Bonucci,44
+DE,Cancelo,41
+ME,Matuidi,44
+ME,Pjanic,43
+ME,Khedira,44
+AT,Cristiano Ronaldo,50
+AT,Mandzukic,43
+AT,Bernardeschi,41

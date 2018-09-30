@@ -1,5 +1,6 @@
 package br.com.tomazrf.simuladorFutebol;
 
+import java.util.Comparator;
 import java.util.List;
 
 public class Time {
@@ -29,5 +30,14 @@ public class Time {
 	public void empatePartida() {
 		this.pontosNaTemporadaAtual += 1;
 	}
+	
+	public static Comparator<Time> getPontosComparator() {
+        return new Comparator<Time>() {
+        	public int compare(Time a, Time b) 
+            { 
+                return b.pontosNaTemporadaAtual - a.pontosNaTemporadaAtual; 
+            } 
+        };
+    }
 	
 }
